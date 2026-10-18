@@ -10,8 +10,8 @@
   --color-pink: #e85d97;       /* links, highlights */
   --color-ink: #4a2c3b;        /* main text */
   --color-lavender: #efe9fb;   /* soft lavender fills */
-  --color-lilac: #a08bd6;      /* lavender accent text */
-  --color-muted: #8f6a7c;      /* secondary text */
+  --color-lilac: #8a6fcf;      /* lavender accent text */
+  --color-muted: #7a5568;      /* secondary text */
 
   /* fonts — loaded from Google Fonts in index.html */
   --font-serif: "Fraunces", Georgia, serif;
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background: var(--color-blush);
+  background: #ffdbe9; /* matches the top of the page gradient */
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -36,7 +36,7 @@ body {
   color: var(--color-ink);
 }
 
-/* blinking terminal cursor used in the nav */
+/* blinking terminal cursor used in the hero */
 @keyframes blink {
   50% { opacity: 0; }
 }

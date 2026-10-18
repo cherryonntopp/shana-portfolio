@@ -1,35 +1,25 @@
-// The background behind every page: soft pink fading into lavender, with a few
-// twinkling sparkles (a light take on the starry sky in the inspo).
-import { motion } from "framer-motion";
+// The background behind every page: pink and lavender color washes with a
+// light paper-grain texture on top.
 
-// where each sparkle sits (percent of the screen) and how big it is
-const sparkles = [
-  { top: 12, left: 8, size: 10 },
-  { top: 22, left: 86, size: 14 },
-  { top: 38, left: 18, size: 8 },
-  { top: 55, left: 92, size: 9 },
-  { top: 70, left: 6, size: 12 },
-  { top: 84, left: 74, size: 8 },
-  { top: 8, left: 58, size: 7 },
-  { top: 64, left: 46, size: 6 },
-];
+// a tiny SVG noise pattern, used as the grain texture
+const grain =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.15 0 0 0 0 0.25 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
 
 export default function SoftBackground() {
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-blush via-[#fbf3fb] to-lavender" />
-
-      {sparkles.map((s, i) => (
-        <motion.span
-          key={i}
-          className={`absolute ${i % 2 ? "text-lilac/70" : "text-rose"}`}
-          style={{ top: `${s.top}%`, left: `${s.left}%`, fontSize: s.size }}
-          animate={{ opacity: [0.25, 0.9, 0.25] }}
-          transition={{ duration: 3 + (i % 3), repeat: Infinity, delay: i * 0.4 }}
-        >
-          ✦
-        </motion.span>
-      ))}
+    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+      {/* color: pink up top, lavender below, with a couple of soft color pools */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(at 12% 8%, #ffc4dc 0, transparent 45%)," +
+            "radial-gradient(at 90% 35%, #dccbff 0, transparent 45%)," +
+            "linear-gradient(180deg, #ffdbe9 0%, #f6dcf3 50%, #e4dbff 100%)",
+        }}
+      />
+      {/* texture: subtle grain over everything (change opacity to taste) */}
+      <div className="absolute inset-0 opacity-40" style={{ backgroundImage: grain }} />
     </div>
   );
 }

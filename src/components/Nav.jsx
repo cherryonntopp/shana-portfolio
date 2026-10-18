@@ -1,4 +1,4 @@
-// Top navigation bar. Left: "shana~$" with a blinking terminal cursor.
+// Top navigation bar. Left: my name.
 // Right: section links + icons. On small screens these fold into a menu.
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -30,19 +30,16 @@ export default function Nav() {
   const [open, setOpen] = useState(false); // is the mobile menu open?
 
   return (
-    <header className="sticky top-0 z-50 bg-blush/70 backdrop-blur-md">
+    <header className="sticky top-0 z-50 bg-white/30 backdrop-blur-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        {/* the terminal-style name */}
-        <Link to="/" className="font-mono text-base text-ink" onClick={() => setOpen(false)}>
-          {site.handle}
-          <span className="text-pink">~$</span>
-          <span className="cursor ml-1 inline-block h-[1.05em] w-[0.55em] translate-y-[3px] bg-pink" />
+        <Link to="/" className="font-serif text-lg text-ink" onClick={() => setOpen(false)}>
+          {site.name} <span className="text-pink">✿</span>
         </Link>
 
         {/* desktop links */}
         <div className="hidden items-center gap-7 sm:flex">
           {sections.map((s) => (
-            <Link key={s} to={`/#${s}`} className="font-serif text-lg text-ink transition-colors hover:text-pink">
+            <Link key={s} to={`/#${s}`} className="text-[15px] font-medium text-ink transition-colors hover:text-pink">
               {s}
             </Link>
           ))}
