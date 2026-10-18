@@ -4,7 +4,7 @@ export default function TechTags({ tech, className = "" }) {
   return (
     <ul className={`flex flex-wrap gap-2 ${className}`}>
       {tech.map((t) => (
-        <li key={t} className="rounded-full border border-rose/50 px-3 py-1 font-mono text-xs text-muted">
+        <li key={t} className="rounded-full bg-lavender px-3 py-1 font-mono text-xs text-muted">
           {t}
         </li>
       ))}

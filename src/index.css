@@ -9,6 +9,8 @@
   --color-rose: #f7a8c4;       /* borders, accents */
   --color-pink: #e85d97;       /* links, highlights */
   --color-ink: #4a2c3b;        /* main text */
+  --color-lavender: #efe9fb;   /* soft lavender fills */
+  --color-lilac: #a08bd6;      /* lavender accent text */
   --color-muted: #8f6a7c;      /* secondary text */
 
   /* fonts — loaded from Google Fonts in index.html */

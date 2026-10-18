@@ -1,38 +1,26 @@
 // One big clickable project card. Clicking it opens /projects/<slug>.
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import TechTags from "./TechTags";
 
-// soft gradients for the card's top tile; cards take turns using these
-const tiles = [
-  "from-[#ffd9e8] to-[#ffeef5]",
-  "from-[#fde2d4] to-[#fff1ea]",
-  "from-[#ead9ff] to-[#f6eeff]",
-  "from-[#d8ecff] to-[#eef6ff]",
-];
-
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project }) {
   return (
-    <motion.div whileHover={{ y: -6 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
-      <Link
-        to={`/projects/${project.slug}`}
-        className="group block h-full overflow-hidden rounded-3xl border border-rose/40 bg-white/70 shadow-[0_10px_40px_-20px_rgba(232,93,151,0.5)] transition-shadow hover:shadow-[0_20px_50px_-20px_rgba(232,93,151,0.6)]"
-      >
-        {/* colorful top tile with the emoji */}
-        <div className={`flex aspect-[16/9] items-center justify-center bg-gradient-to-br ${tiles[index % tiles.length]}`}>
-          <span className="text-6xl transition-transform duration-300 group-hover:scale-110 sm:text-7xl">
-            {project.emoji}
-          </span>
+    <motion.div whileHover={{ y: -4 }} transition={{ type: "spring", stiffness: 300, damping: 22 }}>
+      <Link to={`/projects/${project.slug}`} className="group block rounded-3xl bg-white/80 p-3 ring-1 ring-lavender">
+        {/* screenshot of the actual project */}
+        <div className="overflow-hidden rounded-2xl bg-lavender">
+          <img
+            src={project.image}
+            alt={`${project.title} preview`}
+            loading="lazy"
+            className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          />
         </div>
 
-        <div className="p-6 sm:p-7">
-          {project.badge && <p className="mb-2 font-mono text-xs text-pink">✦ {project.badge}</p>}
-          <h3 className="font-serif text-2xl text-ink">{project.title}</h3>
-          <p className="mt-2 text-muted">{project.summary}</p>
-          <TechTags tech={project.tech} className="mt-5" />
-          <p className="mt-6 font-mono text-sm text-pink">
-            view project <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-          </p>
+        <div className="px-3 pt-5 pb-4">
+          <h3 className="font-serif text-2xl text-ink transition-colors group-hover:text-pink">{project.title}</h3>
+          <p className="mt-1.5 text-muted">{project.summary}</p>
+          {project.badge && <p className="mt-3 font-mono text-xs text-lilac">{project.badge}</p>}
+          <p className="mt-4 font-mono text-xs text-muted">{project.tech.join(" · ")}</p>
         </div>
       </Link>
     </motion.div>

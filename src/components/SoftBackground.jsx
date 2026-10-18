@@ -1,4 +1,4 @@
-// The dreamy background behind every page: a soft pink gradient with a few
+// The background behind every page: soft pink fading into lavender, with a few
 // twinkling sparkles (a light take on the starry sky in the inspo).
 import { motion } from "framer-motion";
 
@@ -17,15 +17,12 @@ const sparkles = [
 export default function SoftBackground() {
   return (
     <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      {/* gradient wash + two blurry blobs of color */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blush via-[#fff0f5] to-[#fde8f0]" />
-      <div className="absolute -top-32 -right-24 size-[28rem] rounded-full bg-petal/70 blur-3xl" />
-      <div className="absolute -bottom-40 -left-24 size-[30rem] rounded-full bg-[#f3e6ff]/60 blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-blush via-[#fbf3fb] to-lavender" />
 
       {sparkles.map((s, i) => (
         <motion.span
           key={i}
-          className="absolute text-rose"
+          className={`absolute ${i % 2 ? "text-lilac/70" : "text-rose"}`}
           style={{ top: `${s.top}%`, left: `${s.left}%`, fontSize: s.size }}
           animate={{ opacity: [0.25, 0.9, 0.25] }}
           transition={{ duration: 3 + (i % 3), repeat: Infinity, delay: i * 0.4 }}

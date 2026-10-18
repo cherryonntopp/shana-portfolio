@@ -24,7 +24,7 @@ export default function Hero() {
         className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 font-hand text-4xl text-ink sm:text-6xl"
       >
         <span>hello, i’m</span>
-        <span className="relative inline-flex h-[1.6em] min-w-[6.5em] items-center justify-center overflow-hidden rounded-full border border-rose/60 bg-white/70 px-6 shadow-[0_8px_30px_-12px_rgba(232,93,151,0.45)]">
+        <span className="relative inline-flex h-[1.6em] min-w-[6.5em] items-center justify-center overflow-hidden rounded-full border border-lilac/40 bg-white/80 px-6">
           <AnimatePresence mode="wait">
             <motion.span
               key={site.rotatingPhrases[index]}

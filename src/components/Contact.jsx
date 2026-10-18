@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 import { GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
 
 const linkClass =
-  "flex items-center gap-2 rounded-full border border-rose/50 bg-white/60 px-5 py-2.5 text-ink transition hover:-translate-y-0.5 hover:border-pink hover:text-pink";
+  "flex items-center gap-2 rounded-full border border-lilac/30 bg-white/70 px-5 py-2.5 text-ink transition hover:-translate-y-0.5 hover:border-pink hover:text-pink";
 
 export default function Contact() {
   return (

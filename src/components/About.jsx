@@ -13,7 +13,7 @@ export default function About() {
           <img
             src={site.avatar}
             alt="avatar"
-            className="size-32 rounded-full border-4 border-white object-cover shadow-lg shadow-rose/30 sm:size-40"
+            className="size-32 rounded-full border-4 border-white object-cover ring-1 ring-lavender sm:size-40"
           />
         </FadeIn>
 
@@ -26,7 +26,7 @@ export default function About() {
 
           <div className="mt-6 flex flex-wrap gap-2">
             {site.skills.map((skill) => (
-              <span key={skill} className="rounded-full bg-petal px-3 py-1 font-mono text-xs text-ink">
+              <span key={skill} className="rounded-full bg-lavender px-3 py-1 font-mono text-xs text-ink">
                 {skill}
               </span>
             ))}
