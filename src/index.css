@@ -1,0 +1,49 @@
+/* Global styles. Tailwind is loaded here, and @theme defines the site's
+   colors and fonts so you can use them as classes (e.g. bg-blush, font-hand). */
+@import "tailwindcss";
+
+@theme {
+  /* colors — change these to re-theme the whole site */
+  --color-blush: #fff6f9;      /* page background */
+  --color-petal: #ffe3ee;      /* soft pink fills */
+  --color-rose: #f7a8c4;       /* borders, accents */
+  --color-pink: #e85d97;       /* links, highlights */
+  --color-ink: #4a2c3b;        /* main text */
+  --color-muted: #8f6a7c;      /* secondary text */
+
+  /* fonts — loaded from Google Fonts in index.html */
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-hand: "Gochi Hand", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Nunito", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-blush);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-petal);
+  color: var(--color-ink);
+}
+
+/* blinking terminal cursor used in the nav */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.cursor {
+  animation: blink 1.1s steps(1) infinite;
+}
+
+/* turn off motion for people who ask their device for less of it */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cursor { animation: none; }
+}
