@@ -23,11 +23,11 @@ export default function ProjectPage() {
 
       {/* title */}
       <FadeIn className="mt-10">
-        <p className="font-mono text-sm text-pink">~/projects/{project.slug}</p>
+        <p className="font-mono text-sm text-berry">~/projects/{project.slug}</p>
         <h1 className="mt-3 font-serif text-4xl text-ink sm:text-5xl">
           {project.title}
         </h1>
-        {project.badge && <p className="mt-4 font-mono text-sm text-lilac">✦ {project.badge}</p>}
+        {project.badge && <p className="mt-4 font-mono text-sm text-berry">✦ {project.badge}</p>}
       </FadeIn>
 
       {/* demo */}
@@ -64,7 +64,7 @@ export default function ProjectPage() {
       </FadeIn>
 
       {/* next project */}
-      <div className="mt-20 border-t border-lavender pt-8 text-right">
+      <div className="mt-20 border-t border-petal pt-8 text-right">
         <Link to={`/projects/${next.slug}`} className="group font-serif text-xl text-ink hover:text-pink">
           <span className="block font-mono text-xs text-muted">next project</span>
           {next.title} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>

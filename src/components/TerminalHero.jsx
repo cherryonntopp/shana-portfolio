@@ -26,7 +26,7 @@ const script = [
     out: (
       <div className="flex flex-wrap gap-x-5 gap-y-1">
         {projects.map((p) => (
-          <Link key={p.slug} to={`/projects/${p.slug}`} className="text-lilac underline-offset-4 hover:text-pink hover:underline">
+          <Link key={p.slug} to={`/projects/${p.slug}`} className="text-berry underline-offset-4 hover:text-pink hover:underline">
             {p.slug}/
           </Link>
         ))}
@@ -78,9 +78,9 @@ export default function TerminalHero() {
         />
 
         {/* the window */}
-        <div className="overflow-hidden rounded-2xl bg-white/75 shadow-[0_20px_50px_-25px_rgba(120,60,140,0.45)] ring-1 ring-white/80 backdrop-blur-sm">
+        <div className="overflow-hidden rounded-2xl bg-white/75 shadow-[0_20px_50px_-25px_rgba(150,50,95,0.4)] ring-1 ring-white/80 backdrop-blur-sm">
           {/* title bar */}
-          <div className="flex items-center gap-2 bg-lavender/80 px-4 py-3">
+          <div className="flex items-center gap-2 bg-petal/80 px-4 py-3">
             <span className="size-3 rounded-full bg-[#ff9db5]" />
             <span className="size-3 rounded-full bg-[#ffd29d]" />
             <span className="size-3 rounded-full bg-[#b9e4b4]" />

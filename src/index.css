@@ -4,13 +4,12 @@
 
 @theme {
   /* colors — change these to re-theme the whole site */
-  --color-blush: #fff6f9;      /* page background */
-  --color-petal: #ffe3ee;      /* soft pink fills */
+  --color-blush: #f6d3df;      /* page background (the one main pink) */
+  --color-petal: #fbe4ec;      /* light pink fills */
   --color-rose: #f7a8c4;       /* borders, accents */
   --color-pink: #e85d97;       /* links, highlights */
   --color-ink: #4a2c3b;        /* main text */
-  --color-lavender: #efe9fb;   /* soft lavender fills */
-  --color-lilac: #8a6fcf;      /* lavender accent text */
+  --color-berry: #b04476;      /* deeper pink for secondary accents */
   --color-muted: #7a5568;      /* secondary text */
 
   /* fonts — loaded from Google Fonts in index.html */
@@ -25,7 +24,7 @@ html {
 }
 
 body {
-  background: #ffdbe9; /* matches the top of the page gradient */
+  background: var(--color-blush);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

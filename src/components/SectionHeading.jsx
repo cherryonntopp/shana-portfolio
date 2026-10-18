@@ -5,7 +5,7 @@ import FadeIn from "./FadeIn";
 export default function SectionHeading({ path, title }) {
   return (
     <FadeIn className="mb-10">
-      <p className="font-mono text-sm text-pink">~/{path}</p>
+      <p className="font-mono text-sm text-berry">~/{path}</p>
       <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">{title}</h2>
     </FadeIn>
   );
