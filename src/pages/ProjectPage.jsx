@@ -16,8 +16,8 @@ export default function ProjectPage() {
   const next = projects[(index + 1) % projects.length]; // loops back to the first
 
   return (
-    <article className="mx-auto max-w-4xl px-5 pt-10 pb-20 sm:px-8">
-      <Link to="/#projects" className="font-mono text-sm text-muted transition-colors hover:text-pink">
+    <article className="mx-auto w-full max-w-4xl px-6 pt-8 pb-20 sm:px-10">
+      <Link to="/projects" className="font-mono text-sm text-muted transition-colors hover:text-pink">
         ← cd ..
       </Link>
 
@@ -56,7 +56,7 @@ export default function ProjectPage() {
             href={link.url}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-pink px-5 py-2.5 font-mono text-sm text-white transition hover:-translate-y-0.5 hover:bg-[#d94c87]"
+            className="rounded-full border-[1.5px] border-ink bg-pink px-5 py-2.5 font-mono text-sm text-white shadow-sticker-sm transition hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-sticker"
           >
             {link.label} ↗
           </a>
@@ -64,7 +64,7 @@ export default function ProjectPage() {
       </FadeIn>
 
       {/* next project */}
-      <div className="mt-20 border-t border-petal pt-8 text-right">
+      <div className="mt-20 border-t border-dashed border-ink/40 pt-8 text-right">
         <Link to={`/projects/${next.slug}`} className="group font-type text-xl font-bold tracking-tight text-ink hover:text-pink">
           <span className="block font-mono text-xs text-muted">next project</span>
           {next.title} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>

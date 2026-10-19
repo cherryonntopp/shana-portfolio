@@ -1,7 +1,7 @@
 // Shows a project's demo on its detail page. Picks the right player
 // based on demo.type: "video", "pdf", or "site" (an embedded live website).
 
-const frame = "overflow-hidden rounded-3xl bg-white ring-1 ring-petal";
+const frame = "overflow-hidden rounded-2xl border-[1.5px] border-ink bg-white shadow-sticker";
 
 export default function ProjectMedia({ demo, title }) {
   if (!demo) return null;
@@ -33,10 +33,10 @@ export default function ProjectMedia({ demo, title }) {
     return (
       <div className={frame}>
         {/* fake browser bar, for a cute framed look */}
-        <div className="flex items-center gap-2 border-b border-petal bg-petal/60 px-4 py-3">
-          <span className="size-3 rounded-full bg-[#ff9db5]" />
-          <span className="size-3 rounded-full bg-[#ffd29d]" />
-          <span className="size-3 rounded-full bg-[#b9e4b4]" />
+        <div className="flex items-center gap-2 border-b-[1.5px] border-ink bg-petal px-4 py-3">
+          <span className="size-3 rounded-full border border-ink bg-[#ff9db5]" />
+          <span className="size-3 rounded-full border border-ink bg-[#ffd29d]" />
+          <span className="size-3 rounded-full border border-ink bg-[#b9e4b4]" />
           <span className="ml-3 truncate font-mono text-xs text-muted">{demo.src.replace(/\?.*$/, "")}</span>
         </div>
         <iframe src={demo.src} title={`${title} demo`} loading="lazy" className="h-[70vh] w-full bg-white" />

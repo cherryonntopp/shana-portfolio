@@ -8,20 +8,28 @@
   --color-petal: #fbe4ec;      /* light pink fills */
   --color-rose: #f7a8c4;       /* borders, accents */
   --color-pink: #e85d97;       /* links, highlights */
-  --color-ink: #4a2c3b;        /* main text */
+  --color-ink: #4a2c3b;        /* main text, outlines */
   --color-berry: #b04476;      /* deeper pink for secondary accents */
   --color-muted: #7a5568;      /* secondary text */
+
+  /* "sticker" shadows: a solid offset in the ink color, no blur */
+  --shadow-sticker-sm: 2px 2px 0 0 #4a2c3b;
+  --shadow-sticker: 4px 4px 0 0 #4a2c3b;
+  --shadow-sticker-lg: 7px 7px 0 0 #4a2c3b;
 
   /* fonts — loaded from Google Fonts in index.html */
   --font-serif: "Fraunces", Georgia, serif;
   --font-hand: "Gochi Hand", cursive;
-  --font-type: "Courier Prime", "Courier New", monospace; /* typewriter, for section headings */
+  --font-type: "Courier Prime", "Courier New", monospace; /* typewriter, for headings + nav */
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --font-sans: "Nunito", system-ui, sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+  /* no pinch-zoom or double-tap zoom on phones; scrolling still works */
+  touch-action: pan-x pan-y;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -32,7 +40,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-petal);
+  background: var(--color-rose);
   color: var(--color-ink);
 }
 
@@ -46,6 +54,5 @@ body {
 
 /* turn off motion for people who ask their device for less of it */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   .cursor { animation: none; }
 }

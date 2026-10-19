@@ -59,32 +59,37 @@ export default function TerminalHero() {
   }, [step, typed]);
 
   return (
-    <section className="flex min-h-[85vh] items-center justify-center px-5 pt-6 pb-16">
+    <section className="flex flex-1 items-center justify-center px-5 pt-16 pb-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="relative w-full max-w-2xl"
       >
-        {/* photo sticker on the corner */}
-        <motion.img
-          src={site.avatar}
-          alt={`photo of ${site.name}`}
+        {/* photo sticker on the corner, held on with a strip of washi tape */}
+        <motion.div
           initial={{ rotate: 0, scale: 0.8, opacity: 0 }}
           animate={{ rotate: 6, scale: 1, opacity: 1 }}
           transition={{ delay: 0.5, type: "spring", stiffness: 200, damping: 14 }}
           whileHover={{ rotate: -3, scale: 1.05 }}
-          className="absolute -top-12 -right-2 z-10 size-24 rounded-2xl border-4 border-white object-cover shadow-md sm:-top-14 sm:-right-10 sm:size-36"
-        />
+          className="absolute -top-14 -right-2 z-10 sm:-top-16 sm:-right-12"
+        >
+          <span className="absolute -top-2.5 left-1/2 z-10 h-5 w-16 -translate-x-1/2 -rotate-6 bg-rose/70 sm:w-20" />
+          <img
+            src={site.avatar}
+            alt={`photo of ${site.name}`}
+            className="size-24 rounded-md border-[6px] border-white object-cover shadow-sticker ring-[1.5px] ring-ink sm:size-36"
+          />
+        </motion.div>
 
         {/* the window */}
-        <div className="overflow-hidden rounded-2xl bg-white/75 shadow-[0_20px_50px_-25px_rgba(150,50,95,0.4)] ring-1 ring-white/80 backdrop-blur-sm">
+        <div className="overflow-hidden rounded-2xl border-[1.5px] border-ink bg-white shadow-sticker-lg">
           {/* title bar */}
-          <div className="flex items-center gap-2 bg-petal/80 px-4 py-3">
-            <span className="size-3 rounded-full bg-[#ff9db5]" />
-            <span className="size-3 rounded-full bg-[#ffd29d]" />
-            <span className="size-3 rounded-full bg-[#b9e4b4]" />
-            <span className="flex-1 pr-14 text-center font-mono text-xs text-muted">~/shana — zsh</span>
+          <div className="flex items-center gap-2 border-b-[1.5px] border-ink bg-petal px-4 py-3">
+            <span className="size-3 rounded-full border border-ink bg-[#ff9db5]" />
+            <span className="size-3 rounded-full border border-ink bg-[#ffd29d]" />
+            <span className="size-3 rounded-full border border-ink bg-[#b9e4b4]" />
+            <span className="flex-1 pr-14 text-center font-mono text-xs text-ink">~/shana — zsh</span>
           </div>
 
           {/* terminal text. Lines that haven't "happened" yet are rendered invisibly
