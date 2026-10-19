@@ -14,7 +14,7 @@ export default function Contact() {
 
       <FadeIn>
         <p className="max-w-lg text-lg text-ink/90">
-          i’m always happy to chat about projects, internships, or your favorite restaurant ✿
+          i’m always happy to connect! im open to chatting new projects, career opportunities, or even your favorite restaurant ✿
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a href={`mailto:${site.links.email}`} className={linkClass}>
