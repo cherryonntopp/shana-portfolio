@@ -24,7 +24,7 @@ export default function ProjectPage() {
       {/* title */}
       <FadeIn className="mt-10">
         <p className="font-mono text-sm text-berry">~/projects/{project.slug}</p>
-        <h1 className="mt-3 font-serif text-4xl text-ink sm:text-5xl">
+        <h1 className="mt-3 font-type text-4xl font-bold tracking-tight text-ink sm:text-5xl">
           {project.title}
         </h1>
         {project.badge && <p className="mt-4 font-mono text-sm text-berry">✦ {project.badge}</p>}
@@ -38,12 +38,12 @@ export default function ProjectPage() {
       {/* details */}
       <div className="mt-14 grid gap-12 md:grid-cols-[2fr_1fr]">
         <FadeIn>
-          <h2 className="font-serif text-2xl text-ink">what it is</h2>
+          <h2 className="font-type text-2xl font-bold tracking-tight text-ink">what it is</h2>
           <p className="mt-4 text-lg leading-relaxed text-ink/90">{project.description}</p>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h2 className="font-serif text-2xl text-ink">tech stack</h2>
+          <h2 className="font-type text-2xl font-bold tracking-tight text-ink">tech stack</h2>
           <TechTags tech={project.tech} className="mt-4" />
         </FadeIn>
       </div>
@@ -65,7 +65,7 @@ export default function ProjectPage() {
 
       {/* next project */}
       <div className="mt-20 border-t border-petal pt-8 text-right">
-        <Link to={`/projects/${next.slug}`} className="group font-serif text-xl text-ink hover:text-pink">
+        <Link to={`/projects/${next.slug}`} className="group font-type text-xl font-bold tracking-tight text-ink hover:text-pink">
           <span className="block font-mono text-xs text-muted">next project</span>
           {next.title} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
         </Link>

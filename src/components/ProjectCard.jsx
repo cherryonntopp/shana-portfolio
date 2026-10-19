@@ -17,7 +17,7 @@ export default function ProjectCard({ project }) {
         </div>
 
         <div className="px-3 pt-5 pb-4">
-          <h3 className="font-serif text-2xl text-ink transition-colors group-hover:text-pink">{project.title}</h3>
+          <h3 className="font-type text-2xl font-bold tracking-tight text-ink transition-colors group-hover:text-pink">{project.title}</h3>
           <p className="mt-1.5 text-muted">{project.summary}</p>
           {project.badge && <p className="mt-3 font-mono text-xs text-berry">{project.badge}</p>}
           <p className="mt-4 font-mono text-xs text-muted">{project.tech.join(" · ")}</p>
