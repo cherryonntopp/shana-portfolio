@@ -15,6 +15,7 @@
   /* fonts — loaded from Google Fonts in index.html */
   --font-serif: "Fraunces", Georgia, serif;
   --font-hand: "Gochi Hand", cursive;
+  --font-type: "Courier Prime", "Courier New", monospace; /* typewriter, for section headings */
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --font-sans: "Nunito", system-ui, sans-serif;
 }
