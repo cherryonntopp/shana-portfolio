@@ -15,63 +15,63 @@
 //                   { type: "site",  src: "https://..." }   (embeds the live site)
 //                 put media files in public/media/
 //   links       – buttons on the detail page: [{ label, url }]
-//   badge       – optional short note on the card (or leave it out)
+//   badge       – optional little note on the card (or leave it out)
 
 export const projects = [
   {
     slug: "signal-and-noise",
-    title: "The Signal and the Noise",
+    title: "the signal and the noise",
     image: "/media/cover-signal.jpg",
-    summary: "Testing whether StockTwits sentiment predicts next-day stock moves.",
+    summary: "can stocktwits sentiment predict next-day stock moves?",
     description:
-      "A machine learning project testing whether StockTwits sentiment can predict next-day stock moves, using 4.2M posts across AAPL, AMZN, NVDA, and TSLA.",
-    tech: ["Python", "pandas", "scikit-learn", "Matplotlib", "seaborn"],
+      "an ml project testing whether stocktwits sentiment can predict next-day stock moves, using 4.2m posts across aapl, amzn, nvda, and tsla.",
+    tech: ["python", "pandas", "scikit-learn", "matplotlib", "seaborn"],
     demo: { type: "site", src: "https://stocktwits-market-prediction.streamlit.app/?embed=true" },
     links: [
-      { label: "GitHub", url: "https://github.com/sonakshipanda/stocktwits-market-prediction" },
-      { label: "Live demo", url: "https://stocktwits-market-prediction.streamlit.app" },
+      { label: "github", url: "https://github.com/sonakshipanda/stocktwits-market-prediction" },
+      { label: "live demo", url: "https://stocktwits-market-prediction.streamlit.app" },
     ],
   },
   {
     slug: "triton-food-pantry",
-    title: "Triton Food Pantry",
+    title: "triton food pantry",
     image: "/media/cover-triton.jpg",
-    summary: "UCSD’s campus food resources, all in one place.",
+    summary: "ucsd’s campus food resources, all in one place.",
     description:
-      "A website that brings UCSD’s campus food resources together in one place: pantry inventory, food-related club events, and recipes you can make with pantry ingredients.",
-    tech: ["HTML5", "CSS3", "JavaScript", "PapaParse", "Tailwind CSS"],
+      "a website that brings ucsd’s campus food resources together in one place: pantry inventory, food-related club events, and recipes you can make with pantry ingredients.",
+    tech: ["html5", "css3", "javascript", "papaparse", "tailwind css"],
     demo: { type: "site", src: "https://cherryonntopp.github.io/Team7-Triton/index.html" },
     links: [
-      { label: "GitHub", url: "https://github.com/cherryonntopp/Team7-Triton" },
-      { label: "Live demo", url: "https://cherryonntopp.github.io/Team7-Triton/index.html" },
+      { label: "github", url: "https://github.com/cherryonntopp/Team7-Triton" },
+      { label: "live demo", url: "https://cherryonntopp.github.io/Team7-Triton/index.html" },
     ],
   },
   {
     slug: "brain-tumor-classification",
-    title: "Brain Tumor Classification",
+    title: "brain tumor classification",
     image: "/media/cover-brain.jpg",
-    summary: "A CNN that classifies brain MRI scans into four categories.",
+    summary: "a cnn that sorts brain mri scans into four categories.",
     description:
-      "A deep learning model that classifies brain MRI scans into four categories: glioma, meningioma, pituitary tumor, or no tumor.",
-    tech: ["Python", "TensorFlow/Keras", "Custom CNN", "NumPy", "Matplotlib"],
+      "a deep learning model that classifies brain mri scans into four categories: glioma, meningioma, pituitary tumor, or no tumor.",
+    tech: ["python", "tensorflow/keras", "custom cnn", "numpy", "matplotlib"],
     demo: { type: "video", src: "/media/brain-tumor-demo.mp4" },
     links: [
-      { label: "GitHub", url: "https://github.com/cherryonntopp/Brain-Tumor-Classification" },
+      { label: "github", url: "https://github.com/cherryonntopp/Brain-Tumor-Classification" },
     ],
   },
   {
     slug: "nasa-viper-wheel",
-    title: "NASA VIPER Lunar Rover Wheel",
+    title: "nasa viper (moon rover)",
     image: "/media/cover-viper.jpg",
-    summary: "A 3D-printable titanium wheel with built-in shock absorption.",
+    summary: "a 3d-printable titanium wheel with built-in shock absorption.",
     description:
-      "A fully 3D-printable, single-piece titanium wheel for NASA’s VIPER lunar rover, with built-in leaf springs that absorb shock without a separate suspension system.",
-    tech: ["Autodesk Fusion 360", "MATLAB", "Material Analysis"],
+      "a fully 3d-printable, single-piece titanium wheel for nasa’s viper lunar rover, with built-in leaf springs that absorb shock without a separate suspension system.",
+    tech: ["autodesk fusion 360", "matlab", "material analysis"],
     demo: { type: "pdf", src: "/media/viper-agu-poster.pdf" },
-    badge: "Presented at AGU, Washington, DC",
+    badge: "presented @ agu, washington dc",
     links: [
-      { label: "Research abstract", url: "https://ui.adsabs.harvard.edu/abs/2024AGUFMED41C2512I/abstract" },
-      { label: "Poster (PDF)", url: "/media/viper-agu-poster.pdf" },
+      { label: "research abstract", url: "https://ui.adsabs.harvard.edu/abs/2024AGUFMED41C2512I/abstract" },
+      { label: "poster (pdf)", url: "/media/viper-agu-poster.pdf" },
     ],
   },
 ];
