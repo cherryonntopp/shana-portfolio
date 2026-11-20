@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import Nav from "./components/Nav";
-import SoftBackground from "./components/SoftBackground";
-import TerminalHero from "./components/TerminalHero";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
@@ -25,13 +24,12 @@ export default function App() {
   return (
     // reducedMotion="user" tones down animations for people who prefer less motion
     <MotionConfig reducedMotion="user">
-      <SoftBackground />
       <ScrollToTop />
       <div className="flex min-h-[100dvh] flex-col">
         <Nav />
         <main className="flex flex-1 flex-col">
           <Routes>
-            <Route path="/" element={<TerminalHero />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
